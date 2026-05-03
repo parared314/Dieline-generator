@@ -1,0 +1,66 @@
+template_id: tray_box
+name: "Tray Box"
+description: >
+  Open-top tray box (shelf box). Simple structure with four walls
+  and a glue tab. Ideal for product display trays and food packaging.
+
+parameters:
+  - name: width
+    label: "Width (mm)"
+    type: float
+    default: 100.0
+    min: 20.0
+    max: 600.0
+    step: 0.5
+    unit: mm
+    group: "Box Dimensions"
+
+  - name: length
+    label: "Length (mm)"
+    type: float
+    default: 150.0
+    min: 20.0
+    max: 800.0
+    step: 0.5
+    unit: mm
+    group: "Box Dimensions"
+
+  - name: height
+    label: "Height (mm)"
+    type: float
+    default: 50.0
+    min: 10.0
+    max: 300.0
+    step: 0.5
+    unit: mm
+    group: "Box Dimensions"
+
+  - name: glue_tab_width
+    label: "Glue Tab Width (mm)"
+    type: float
+    default: 12.0
+    min: 5.0
+    max: 25.0
+    step: 0.5
+    unit: mm
+    group: "Flap Settings"
+
+  - name: corner_notch
+    label: "Corner Notch Size (mm)"
+    type: float
+    default: 5.0
+    min: 0.0
+    max: 15.0
+    step: 0.5
+    unit: mm
+    group: "Flap Settings"
+
+  - name: bleed
+    label: "Bleed Margin (mm)"
+    type: float
+    default: 3.0
+    min: 0.0
+    max: 10.0
+    step: 0.5
+    unit: mm
+    group: "Print Settings"

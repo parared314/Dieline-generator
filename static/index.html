@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dieline Generator</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header>
+  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#e94560" stroke-width="2">
+    <rect x="2" y="7" width="20" height="14" rx="2"/>
+    <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+    <line x1="12" y1="12" x2="12" y2="16"/>
+    <line x1="10" y1="14" x2="14" y2="14"/>
+  </svg>
+  <h1>Dieline Generator</h1>
+  <div class="legend">
+    <span class="legend-item"><span class="legend-swatch cut"></span>Cut</span>
+    <span class="legend-item"><span class="legend-swatch fold"></span>Fold</span>
+    <span class="legend-item"><span class="legend-swatch perf"></span>Perforation</span>
+    <span class="legend-item"><span class="legend-swatch guide"></span>Guide/Bleed</span>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- Template sidebar -->
+  <nav id="template-sidebar">
+    <h2>Packaging Templates</h2>
+    <!-- Populated by app.js -->
+  </nav>
+
+  <!-- Parameters panel -->
+  <aside id="params-panel">
+    <div class="panel-header">
+      <h2>Parameters</h2>
+      <p>Select a template to get started</p>
+    </div>
+    <form id="params-form" autocomplete="off">
+      <!-- Dynamically built by form.js from template schema -->
+    </form>
+    <div class="panel-footer">
+      <button id="download-btn" disabled>Download SVG</button>
+    </div>
+  </aside>
+
+  <!-- Preview area -->
+  <main id="preview-panel">
+    <div id="preview-toolbar">
+      <span>Preview</span>
+      <!-- Layer toggles injected by preview.js -->
+    </div>
+    <div id="svg-container">
+      <div style="color:#888;font-size:0.85rem">Select a template to begin</div>
+    </div>
+    <div id="status-bar"></div>
+  </main>
+
+</div>
+
+<script src="/static/js/form.js"></script>
+<script src="/static/js/preview.js"></script>
+<script src="/static/js/app.js"></script>
+
+</body>
+</html>
